@@ -2,6 +2,7 @@
 
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
+const input = document.querySelector('.input')
 
 const renderCountry = function (data, className = '') {
   const html = `
@@ -95,6 +96,6 @@ const getCoutryData = function(country){
 };
 
 btn.addEventListener('click', function(){
-  getCoutryData('uzbekistan')
+  getCoutryData(`${input.value}`)
   
 })
